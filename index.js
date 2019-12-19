@@ -48,8 +48,8 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(, callback){
-  return callback([].length)
+function processLength(list, callback){
+  return callback(list.length)
 }
 
 /**
@@ -88,11 +88,17 @@ return callback(stringList[stringList.length -1])
  * should return 1000.
 */
 function processSum(numberList, callback) {
-const sum = numberList.reduce((sum, ) => {
-  return sum + currentValue;
-},)
-callback(sum)
+ const sum = numberList.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+
+ return callback(sum)
 }
+
+
+ 
+
+
+
+
 
 
 /**
@@ -114,9 +120,8 @@ callback(sum)
  * should return 1000.
 */
 function processProduct(num1, num2, callback) {
-
+    return callback(num1 * num2)
 }
-
 /**
  * ### Challenge `processContains`
  * 
@@ -137,8 +142,8 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  return callback(list.includes((item)))
 }
 
 /**
