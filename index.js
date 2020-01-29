@@ -88,7 +88,7 @@ return callback(stringList[stringList.length -1])
  * should return 1000.
 */
 function processSum(numberList, callback) {
- const sum = numberList.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+ const sum = numberList.reduce( (accumulator, currentValue) => accumulator + currentValue, 0)
 
  return callback(sum)
 }
@@ -165,10 +165,10 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list, callback) {
+const deduped = [...new Set(list)]
+return callback(deduped)
 }
-
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 
@@ -187,7 +187,8 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
+  cons
   /* CODE HERE */
 }
 
